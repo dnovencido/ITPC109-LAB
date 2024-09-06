@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Safe Fonts, Controling Spacing and Indentation Example</title>
+        <style>
+            html {
+                font-size: 16px;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+            h1 {
+                font-family: 'Trebuchet MS', Helvetica, sans-serif;
+                letter-spacing: -1px; /* Adjusts kerning */
+                font-size: 2rem;
+            }
+
+            p.sub-heading {
+                font-family: 'Times New Roman', Times, serif;
+                line-height: 1.5; /* Adjusts leading */
+                font-weight: bold;
+            }
+
+            code {
+                font-family: 'Courier New', Courier, monospace;
+                letter-spacing: 2px; /* Adjusts tracking */
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Heading Example</h1>
+            <p class="sub-heading">This is a paragraph with Times New Roman font.</p>
+            <p class="code-preview">Here's some code text: 
+                <code>console.log('Hello, world!');</code>
+            </p>
+        </main>
+    </body>
+</html>

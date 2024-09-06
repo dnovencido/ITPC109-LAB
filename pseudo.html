@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pseudo-Elements and Pseudo-Classes Example</title>
+        <style>
+            /* Pseudo-Element Examples */
+            /* Adds quotation marks before and after the content of elements with the class .quote. This is useful for styling blockquotes. */
+
+            .quote::before {
+                content: "“";
+                font-size: 2em;
+                color: gray;
+            }
+
+            .quote::after {
+                content: "”";
+                font-size: 2em;
+                color: gray;
+            }
+
+            /* Styles the first line of the blockquote with bold text and a dark blue color. */
+            .quote::first-line {
+                font-weight: bold;
+                color: darkblue;
+            }
+
+            /* Pseudo-Class Examples */
+            a:hover {
+                color: red;
+            }
+
+            /* Applies a blue outline around buttons when they are focused (e.g., clicked or tabbed into) */
+            button:focus {
+                outline: 2px solid blue;
+            }
+
+            /* Applies a light gray background to odd-numbered list items in the unordered list. */
+            ul li:nth-child(odd) {
+                background-color: #f0f0f0;
+            }
+
+            /* Makes the first item in the list bold. */
+            ul li:first-child {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <blockquote class="quote">
+            This is a blockquote with pseudo-elements styling.
+        </blockquote>
+
+        <p><a href="#">Hover over this link to see the color change.</a></p>
+
+        <button>Click or Tab into this button to see the focus effect.</button>
+
+        <ul>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+            <li>Fourth item</li>
+        </ul>
+    </body>
+</html>

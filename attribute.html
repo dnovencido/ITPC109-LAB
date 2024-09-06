@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Attribute Selector Example</title>
+        <style>
+            /* Select elements where the 'data-tags' attribute contains the word 'text' */
+            .box[data-tags~="text"] {
+                border: 2px solid red;
+            }
+
+            /* Select elements where the 'data-lang' attribute is exactly 'en' or starts with 'en-' */
+            .box[data-lang|="en"] {
+                background-color: lightblue;
+            }
+
+            /* Select elements where the 'data-type' attribute starts with 'text' */
+            .box[data-type^="text"] {
+                font-weight: bold;
+            }
+
+            /* Select elements where the 'data-ext' attribute ends with 'text' */
+            .box[data-ext$="text"] {
+                color: green;
+            }
+
+            /* Select elements where the 'data-content' attribute contains 'text' anywhere */
+            .box[data-content*="text"] {
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="box" data-tags="text html css" data-lang="en-US" data-type="textDocument" data-ext="plaintext" data-content="This is a text file.">Box 1</div>
+            <div class="box" data-tags="html css" data-lang="fr" data-type="htmlDocument" data-ext="html" data-content="Contains HTML structure.">Box 2</div>
+            <div class="box" data-tags="text js" data-lang="en" data-type="textScript" data-ext="javascript" data-content="JavaScript file with text-based code.">Box 3</div>
+            <div class="box" data-tags="css js" data-lang="en-GB" data-type="binaryFile" data-ext="exe" data-content="Executable file, not text.">Box 4</div>
+            <div class="box-main" data-tags="css js html" data-lang="en-fr" data-type="hexFile" data-ext="image" data-content="Image file, not text.">Box 5</div>
+        </main>
+    </body>
+</html>
