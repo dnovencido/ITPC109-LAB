@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
-
 :root {
     --violet: #562af3;
     --white: #FFFFFF;
@@ -15,8 +13,7 @@ h1 {
 body {
     margin: 0;
     background-color: #ECEFF1;
-    font-family: 'Lato', sans-serif;
-    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -65,6 +62,10 @@ body {
     font-size: 1rem;
 }
 
+.todo-input:focus {
+    outline: 4px solid rgb(244, 204, 251);
+}
+
 .btn {
     color: var(--white);
     padding: 1rem 2.5rem;
@@ -72,6 +73,7 @@ body {
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 25px;
+    font-weight: bold;
 }
 
 .btn-primary {
